@@ -66,3 +66,12 @@ Atividades de saldo em "01-Novembro / 2026":
 - Notificação Teams: **não enviada** — o host do webhook do Power Automate está bloqueado pela política de rede do ambiente.
 - Etapa 3: nenhum apontamento nas atividades da rotina até o momento.
 - E-mails de outros clientes (Logicalis, FIAP/Alura) e o informativo interno foram ignorados nesta fase de teste.
+
+### 09/11/2026 – 2ª execução (manual)
+- Notificação Teams da atividade 34023217 reenviada após liberação de rede: webhook respondeu HTTP 202.
+- Nenhum e-mail novo após 2026-11-09T13:39:22Z.
+- Atividade 34023217 alterada manualmente: Tipo CF → ABAP e estimativa 2h → 3h.
+  Recálculo: saldo ABAP = 5h estimado − 0h real − 0h de outras reservas = 5h ≥ 3h → mantém 3h, reservadas do ABAP
+  (sobram 2h livres no ABAP). A reserva de 2h no CF foi liberada (CF volta a 6h livres).
+  Nenhuma alteração gravada no Artia; atividades de saldo inalteradas.
+- Etapa 3: nenhum apontamento nas atividades da rotina.
