@@ -87,4 +87,11 @@ Atividades de saldo em "01-Novembro / 2026":
 #### Mapa de apontamentos espelhados (evita duplicar em execuções futuras)
 | Origem (atividade/apontamento) | Destino (saldo/apontamento) | Horas |
 |---|---|---|
-| 34023217 / 29207528 | CF 34022714 / 29207536 | 3h |
+| 34023217 / 29207528 | ABAP 34022717 / 29207590 | 3h |
+
+### 09/11/2026 – 4ª execução (manual)
+- Igor Quirino movido da equipe Consultor Funcional para ABAP.
+- Espelho do apontamento 29207528 refeito: criado 29207590 na atividade de saldo ABAP (3h) e excluído o espelho anterior
+  29207536 da atividade CF (que tinha sido criado pela própria rotina).
+- Saldos: CF 6h livres · CT 12h · ABAP 5h estimado / 3h real → 2h livres · GS 2h.
+- Regra: se a equipe do autor de um apontamento mudar, o espelho é movido para a atividade de saldo da equipe atual.
