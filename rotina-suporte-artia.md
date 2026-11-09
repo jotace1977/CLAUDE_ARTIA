@@ -75,3 +75,16 @@ Atividades de saldo em "01-Novembro / 2026":
   (sobram 2h livres no ABAP). A reserva de 2h no CF foi liberada (CF volta a 6h livres).
   Nenhuma alteração gravada no Artia; atividades de saldo inalteradas.
 - Etapa 3: nenhum apontamento nas atividades da rotina.
+
+### 09/11/2026 – 3ª execução (manual)
+- E-mails novos (13:51–13:54Z): Logicalis (cronograma jobs OBTI) e Cereal (SPED K290/K291/K292 e "VALOR ERRADO NO SPED")
+  — fora do escopo de teste (só ARTIA), ignorados. Último e-mail visto: 2026-11-09T13:54:58Z.
+- Etapa 3: apontamento 29207528 na atividade 34023217 (Igor Quirino, equipe Consultor Funcional, 09/11 09:00–12:00, 3h,
+  "Apontamento de teste") → espelhado na atividade de saldo CF 34022714 como apontamento 29207536 (3h; CF 6h → real 3h, cabe inteiro).
+  Obs.: o espelho fica registrado em nome do usuário da integração (José Carlos Antunes); a API não permite apontar em nome de outra pessoa.
+- Etapa 2: atividade 34023217 (ABAP, 3h estimadas, 3h reais) — reserva remanescente = 0h. Saldo ABAP livre = 5h; CF livre = 3h.
+
+#### Mapa de apontamentos espelhados (evita duplicar em execuções futuras)
+| Origem (atividade/apontamento) | Destino (saldo/apontamento) | Horas |
+|---|---|---|
+| 34023217 / 29207528 | CF 34022714 / 29207536 | 3h |
