@@ -87,8 +87,10 @@ Projeto de Implantação 714182 · Alocações Outsourcing 708504 · Desenv. Fá
    Sem valor → não lança e reporta.
 9. **Atividades de cargo** — horas por cargo vindas de Horas Projetadas, só os cargos com horas > 0:
    `CF` = CF1 + CF2 (uma única atividade) · `CT` = CT · `ABAP` = CTA · `GP` = GP · `GS` = GS.
-   - **Grupo Suporte (sempre)**: criar uma pasta por mês entre Início e Término estimado, nome `Mês / AA`
-     (ex.: "Dezembro / 26"); em cada pasta, uma atividade por cargo com o esforço estimado do cargo (as horas
+   - **Grupo Suporte (sempre)**: criar uma pasta por mês entre Início e Término estimado, nome
+     `NN - Mês / AA`, onde NN é a sequência do mês dentro do contrato com 2 dígitos (01 = mês de início), para a
+     ordem alfanumérica seguir a ordem do contrato (ex.: contrato dez/26–mai/27 → "01 - Dezembro / 26",
+     "02 - Janeiro / 27", …, "06 - Maio / 27"); em cada pasta, uma atividade por cargo com o esforço estimado do cargo (as horas
      são replicadas em todos os meses), início = 1º dia do mês, término = último dia do mês.
      Os títulos CF/CT/ABAP/GS são os mesmos que a rotina Suporte→Artia usa como atividades de saldo.
    - **Grupo Projetos**: só quando "Tanque de Horas?" = Sim, criar no projeto uma atividade por cargo com o esforço.
@@ -124,8 +126,15 @@ Projeto de Implantação 714182 · Alocações Outsourcing 708504 · Desenv. Fá
     Horas Orçadas 640 = CF 480 + CTA 64 + GP 96, Tanque = Não) + receita realizada R$ 130.519,30 (6604500).
   - Projeto 6812128 "PS_209_2026 - Loja Elétrica - Contrato Suporte Tax One e Módulos RT" (Suporte Tax One, ERP SAP S/4HANA,
     01/12/2026 → 31/05/2027, Tanque = Não) + receita realizada R$ 51.000,00 (6604501).
-    Pastas Dezembro / 26 (6812129), Janeiro / 27 (6812131), Fevereiro / 27 (6812132), Março / 27 (6812133),
-    Abril / 27 (6812134), Maio / 27 (6812135), cada uma com CF 300h e GS 48h (dia 1 → último dia do mês).
+    Pastas mensais 6812129, 6812131, 6812132, 6812133, 6812134, 6812135 (dez/26 → mai/27) com atividades CF e GS
+    (dia 1 → último dia do mês); criadas com CF 300h e GS 48h, corrigidas no mesmo dia (ver abaixo).
 - **Duplicados ignorados**: QUALICORP PS_148_2026 (projeto 6759376) e PS_090_2026 (projetos 6759373/6759374/6759375).
 - **Pendente**: PS_182_2026 — "Consultoria DERE - (BPO)" (65162328482) e "QUALICORP - Consultoria/BPO - DeRE 1º evento"
   (68559093927) são o mesmo contrato (gerarão 1 projeto no grupo Suporte), mas estão sem Data início/final do contrato.
+
+### 24/11/2026 (ajustes manuais)
+- Regra nova: pastas mensais do grupo Suporte numeradas pela sequência do contrato (`NN - Mês / AA`).
+  Pastas do PS_209_2026 renomeadas: 01 - Dezembro / 26 · 02 - Janeiro / 27 · 03 - Fevereiro / 27 ·
+  04 - Março / 27 · 05 - Abril / 27 · 06 - Maio / 27.
+- Horas mensais do PS_209_2026 corrigidas no HubSpot (CF1 50h, GS 8h) e replicadas no Artia: as 6 atividades CF
+  (34091492/94/96/98, 34091500/02) passaram de 300h para 50h e as 6 GS (34091493/95/97/99, 34091501/03) de 48h para 8h.
